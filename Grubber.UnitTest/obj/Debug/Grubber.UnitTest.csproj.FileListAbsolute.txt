@@ -1,0 +1,16 @@
+C:\Git\Notarize\Grubber\Grubber.UnitTest\obj\Debug\Grubber.UnitTest.csprojResolveAssemblyReference.cache
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Grubber.UnitTest.dll
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Grubber.UnitTest.pdb
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Grubber.dll
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Grubber.pdb
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Git\Grubber\Grubber.UnitTest\obj\Debug\Grubber.UnitTest.csprojResolveAssemblyReference.cache
+C:\Git\Grubber\Grubber.UnitTest\obj\Debug\Grubber.UnitTest.dll
+C:\Git\Grubber\Grubber.UnitTest\obj\Debug\Grubber.UnitTest.pdb
+C:\Git\Grubber\Grubber.UnitTest\bin\Debug\Dapper.xml

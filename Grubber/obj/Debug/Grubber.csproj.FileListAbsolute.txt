@@ -1,0 +1,8 @@
+C:\Git\Notarize\Grubber\Grubber\obj\Debug\Grubber.csprojResolveAssemblyReference.cache
+C:\Git\Grubber\Grubber\bin\Debug\Grubber.dll
+C:\Git\Grubber\Grubber\bin\Debug\Grubber.pdb
+C:\Git\Grubber\Grubber\bin\Debug\Dapper.dll
+C:\Git\Grubber\Grubber\bin\Debug\Dapper.xml
+C:\Git\Grubber\Grubber\obj\Debug\Grubber.csprojResolveAssemblyReference.cache
+C:\Git\Grubber\Grubber\obj\Debug\Grubber.dll
+C:\Git\Grubber\Grubber\obj\Debug\Grubber.pdb
