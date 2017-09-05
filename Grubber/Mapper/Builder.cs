@@ -49,29 +49,45 @@ namespace Grubber.Mapper
             return parameters;
         }
 
-
-        public TClass Create<TClass>(TClass item, IDbConnection db) where TClass : class
+        public void Create<TClass>(TClass item, IDbConnection db) where TClass : class
         {
+            // TODO: Primary Key columns must have values
             Type type = Validate(item);
 
             IEnumerable<PropertyModel> models = ModelDict[type];
-            string sql = "INSERT INTO " + Tables[type];
+            string sql = "INSERT INTO [" + Tables[type] + "]";
 
+            PropertyModel identityColumn = models.SingleOrDefault(x => x.IsIdentity);
             List<string> columns = new List<string>();
             List<string> values = new List<string>();
-            foreach (var model in models.Where(x => !x.IsKey))
+            foreach (var model in models.Where(x => !x.IsIdentity))
             {
                 columns.Add(model.Column);
                 values.Add("@" + model.Name);
             }
 
             sql += " (" + string.Join(", ", columns) + ")";
-            sql += " OUTPUT INSERTED." + models.Single(x => x.IsKey).Column;
+            if(identityColumn != null)
+            {
+                sql += " OUTPUT INSERTED." + identityColumn.Column;
+            }
             sql += " VALUES (" + string.Join(", ", values) + ")";
 
-            using (SqlConnection conn = new SqlConnection(db.ConnectionString))
+            if (identityColumn != null)
             {
-                return conn.Query<TClass>(sql, Build(item)).SingleOrDefault();
+                IDictionary<string, object> result;
+                using (SqlConnection conn = new SqlConnection(db.ConnectionString))
+                {
+                    result = (IDictionary<string, object>)conn.Query(sql, Build(item)).SingleOrDefault();
+                }
+                identityColumn.Propertyinfo.SetValue(item, result[identityColumn.Column]);
+            }
+            else
+            {
+                using (SqlConnection conn = new SqlConnection(db.ConnectionString))
+                {
+                    conn.Execute(sql, Build(item));
+                }
             }
         }
     }
